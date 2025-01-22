@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <ul id="messages"></ul>
+  <input type="text" id="messageInput" placeholder="Write a message">
+  <button onclick="sendMessage()">Send</button>
+
+  <script>
+    const socket = new WebSocket('ws://localhost:8080');
+
+    socket.onopen = function(event) {
+      console.log('Setup connection', event);
+    };
+
+    socket.onmessage = function(event) {
+      const messages = document.getElementById('messages');
+      const li = document.createElement('li');
+      li.textContent = event.data;
+      messages.appendChild(li);
+    };
+
+    function sendMessage() {
+      const input = document.getElementById('messageInput');
+      const message = input.value;
+      socket.send(message);
+      input.value = '';
+    }
+  </script>
+</body>
+</html>
