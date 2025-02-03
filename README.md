@@ -1,8 +1,8 @@
 
 # WebSocketChat
-This repository contains a sample client-server apllication.  Server is a dockerized graphQL implemented in javascript with Node and client iOS application that feteches data from server. 
+This repository contains a sample client-server apllication.  Server is a dockerized websocket implemented in javascript with NodeJS and client iOS application that feteches data from server. 
 
-This repository serves as the foundational code for the accompanying blog post.[Websockets Made Easy: Create a simple Chat App in iOS](https://javios.eu/swift/harnessing-nfc-technology-in-your-ios-app/) 
+This repository serves as the foundational code for the accompanying blog post.[Websockets Made Easy: Create a simple Chat App in iOS](https://javios.eu/swift/websockets-made-easy-create-a-simple-chat-app-in-ios/)
 
 ## 🎥 Demo Video
 
